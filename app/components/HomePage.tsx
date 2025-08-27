@@ -2,8 +2,10 @@ import React from 'react';
 import Link from 'next/link';
 import { TrendingUp, Shield, Clock, Users, ArrowRight } from 'lucide-react';
 
+type View = 'home' | 'how-it-works' | 'business-dashboard' | 'upload-invoice' | 'investor-dashboard' | 'marketplace';
+
 interface HomePageProps {
-  onNavigate: (view: string) => void;
+  onNavigate: (view: View) => void;
   onUserTypeChange: (type: 'business' | 'investor') => void;
 }
 

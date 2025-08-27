@@ -4,9 +4,11 @@ import logo from '@/public/snapture-black.svg';
 import Link from 'next/link';
 import Image from 'next/image';
 
+type View = 'home' | 'how-it-works' | 'business-dashboard' | 'upload-invoice' | 'investor-dashboard' | 'marketplace';
+
 interface HeaderProps {
   currentView: string;
-  onNavigate: (view: string) => void;
+  onNavigate: (view: View) => void;
   userType: 'business' | 'investor' | null;
   onUserTypeChange: (type: 'business' | 'investor' | null) => void;
   mobileMenuOpen: boolean;
